@@ -1,0 +1,26 @@
+Xpath:
+- select by tag '//div' (select all div elements)
+- select by atribute '//input[@type='text']' (Selects all <input> elements with type="text")
+- select by text '//button[text()='Submit']' (Selects a <button> element with the exact text Submit)
+- select by partial match with 'contains' '//a[contains(@href, 'example')]' (Selects all <a> elements with href containing "example")
+- select by partial match with 'starts-with' '//div[starts-with(@class, 'container')]' (Selects all div with class starting "container")
+
+Relations:
+- Any descendant '//div//a' (Selects all <a> tags inside <div>, regardless of depth.)
+- Siblings '//h3/following-sibling::p' (Selects the <p> element that is a sibling following an <h3>)
+
+CSS:
+- div (Selects all <div> elements.)
+- Id selector '#elementId' (Selects the element with id="elementId".)
+- class selector '.className' (Selects the element with class="className".)
+- atribute selector 'input[type='text']' (Selects all <input> elements with type="text")
+- Partial match 'a[href*='example']' (Selects all <a> elements with href containing "example")
+- Starts with 'div[class^='container']' (Selects all <a> elements with href containing "example")
+- Ends with 'img[src$='.jpg']'
+
+Relations:
+- Direct child 'div > span'
+- Descendant 'div span' ( will select any span that are inside div, even if there are other
+elements between them. Just like // in xpath)
+- Direct sibling 'div+ or + / ~ span' (just like following-sibling in xpath)
+
